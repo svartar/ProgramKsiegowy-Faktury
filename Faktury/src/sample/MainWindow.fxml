@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindow">
+    <rowConstraints>
+        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="17.0" />
+        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="450.0" />
+        <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="24.0" />
+        <RowConstraints maxHeight="39.0" minHeight="3.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="25.0" minHeight="0.0" prefHeight="21.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="95.0" minWidth="10.0" prefWidth="33.0" />
+        <ColumnConstraints minWidth="800.0" />
+        <ColumnConstraints maxWidth="95.0" minWidth="10.0" prefWidth="24.0" />
+    </columnConstraints>
+    <children>
+        <TableView fx:id="myTableView" editable="true" prefHeight="450.0" prefWidth="1000.0" tableMenuButtonVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="tcType" prefWidth="75.0" text="Rodzaj" />
+                <TableColumn fx:id="tcInvoiceNumber" prefWidth="115.0" text="Nr faktury" />
+                <TableColumn fx:id="tcContractor" prefWidth="120.0" text="Kontrahent (NIP)" />
+                <TableColumn fx:id="tcInvoiceData" prefWidth="110.0" text="Data wystawienia" />
+                <TableColumn fx:id="tcSaleData" prefWidth="110.0" text="Data sprzedaży" />
+                <TableColumn fx:id="tcNetto" prefWidth="85.0" text="Netto" />
+                <TableColumn fx:id="tcVat" prefWidth="75.0" text="VAT" />
+                <TableColumn fx:id="tcBrutto" prefWidth="100.0" text="Brutto" />
+                <TableColumn fx:id="tcVatDeduction" minWidth="100.0" prefWidth="100.0" text="Odliczenia VAT" />
+                <TableColumn fx:id="tcCitDeduction" minWidth="100.0" prefWidth="100.0" text="Odliczenia CIT" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <children>
+            <Button fx:id="btnAddInvoice" mnemonicParsing="false" text="Dodaj fakturę" />
+                <Button fx:id="btnEditInvoice" mnemonicParsing="false" text="Edytuj fakturę" />
+                <Button fx:id="btnRemoveInvoice" mnemonicParsing="false" text="Usuń fakturę" />
+                <Button fx:id="btnCalculateTaxes" mnemonicParsing="false" text="Oblicz podatki" />
+            </children>
+        </HBox>
+        <Label fx:id="labelVat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label fx:id="labelCit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>
