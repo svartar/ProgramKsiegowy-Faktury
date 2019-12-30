@@ -1,9 +1,9 @@
 # ProgramKsiegowy-Faktury
 Application for posting invoices and calculate taxes.
 Function:
- 1. Add invoice
- 2. Remove invoice
- 3. Edit invoice
- 4. calculate VAT tax.
- 5. calculate CIT tax.
- 6. application show you all your invoices as a table
+1. Application show you all your invoices as a table
+2. Add invoice
+3. Remove invoice
+4. Edit invoice
+5. Calculate VAT tax.
+6. Calculate CIT tax. 
